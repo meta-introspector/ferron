@@ -1,9 +1,5 @@
 {
-  description = "Ferron web server for ZOS";
-
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  };
+  description = "Ferron 2.x for ZOS";
 
   outputs = { self, nixpkgs }:
     let
@@ -11,23 +7,10 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      packages.${system}.default = pkgs.rustPlatform.buildRustPackage {
-        pname = "ferron";
-        version = "1.3.9";
-
-        src = ./.;
-
-        cargoLock = {
-          lockFile = ./Cargo.lock;
-          outputHashes = {
-            "cache_control-0.2.0" = "sha256-Xw8JMo5bCgLfOsjsdyOxl956ggjWqywoQZA8Liz7bKE=";
-          };
-        };
-
-        meta = {
-          description = "Fast, memory-safe web server";
-          license = pkgs.lib.licenses.mit;
-        };
-      };
+      packages.${system}.default = pkgs.runCommand "ferron-2.5.5" {} ''
+        mkdir -p $out/bin
+        cp ${./target/release/ferron} $out/bin/ferron
+        chmod +x $out/bin/ferron
+      '';
     };
 }
