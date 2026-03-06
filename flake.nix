@@ -14,7 +14,7 @@
         version = "2.5.5";
         src = ./.;
         
-        buildFeatures = [ "config-yaml-legacy" "runtime-tokio" ];
+        buildFeatures = [ "config-yaml-legacy" ];
         
         cargoLock = {
           lockFile = ./Cargo.lock;
@@ -26,3 +26,7 @@
           };
         };
         
+        meta.license = pkgs.lib.licenses.mit;
+      };
+    };
+}

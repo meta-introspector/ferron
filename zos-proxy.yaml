@@ -1,0 +1,13 @@
+# Ferron config for ZOS proxy
+global:
+  port: 8443
+  logFilePath: /var/log/ferron/access.log
+  errorLogFilePath: /var/log/ferron/error.log
+
+# Reverse proxy to ZOS
+reverseProxy:
+  - path: /zos
+    target: http://127.0.0.1:8081
+    
+  - path: /file-manager
+    target: http://127.0.0.1:8080

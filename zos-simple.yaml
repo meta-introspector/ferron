@@ -1,0 +1,5 @@
+global:
+  port: 8444
+  loadModules:
+    - rproxy
+  proxyTo: http://127.0.0.1:8081

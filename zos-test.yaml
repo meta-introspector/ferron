@@ -1,0 +1,13 @@
+global:
+  port: 8443
+  wwwroot: /var/www/html/solfunmeme
+  loadModules:
+    - rproxy
+
+hosts:
+  - domain: solana.solfunmeme.com
+    locations:
+      - path: /zos
+        proxyTo: http://127.0.0.1:8081
+      - path: /file-manager
+        proxyTo: http://127.0.0.1:8080
