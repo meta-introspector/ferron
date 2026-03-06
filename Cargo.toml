@@ -24,7 +24,7 @@ ferron-modules-builtin = { path = "./ferron-modules-builtin", default-features =
 ferron-observability-builtin = { path = "./ferron-observability-builtin", default-features = false }
 
 [patch.crates-io]
-monoio = { git = "file:///home/mdupont/git/github.com/DorianNiemiecSVRJS/monoio", branch = "fix-nix-build" }
+monoio = { git = "https://github.com/meta-introspector/monoio.git", branch = "fix-nix-build" }
 cache_control = { git = "https://github.com/DorianNiemiecSVRJS/rust-cache-control.git" }
 dns-update = { git = "https://github.com/DorianNiemiecSVRJS/dns-update.git" }                                   # This is a fork of "dns-update" crate, with updated dependencies and crypto provider requirement removed
 async-compression = { git = "https://github.com/DorianNiemiecSVRJS/async-compression.git", branch = "0.4.28"  } # This is a fork of "async-compression" crate that uses "zlib-rs" backend for "flate2" instead of "miniz_oxide"

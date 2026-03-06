@@ -2663,7 +2663,7 @@ dependencies = [
 [[package]]
 name = "monoio"
 version = "0.2.4"
-source = "git+file:///home/mdupont/git/github.com/DorianNiemiecSVRJS/monoio?branch=fix-nix-build#b959d4094b224234d78c20f67db6edcaa3c0ad61"
+source = "git+https://github.com/meta-introspector/monoio.git?branch=fix-nix-build#b959d4094b224234d78c20f67db6edcaa3c0ad61"
 dependencies = [
  "auto-const-array",
  "bytes",
@@ -2699,7 +2699,7 @@ dependencies = [
 [[package]]
 name = "monoio-macros"
 version = "0.1.0"
-source = "git+file:///home/mdupont/git/github.com/DorianNiemiecSVRJS/monoio?branch=fix-nix-build#b959d4094b224234d78c20f67db6edcaa3c0ad61"
+source = "git+https://github.com/meta-introspector/monoio.git?branch=fix-nix-build#b959d4094b224234d78c20f67db6edcaa3c0ad61"
 dependencies = [
  "proc-macro2",
  "quote",
