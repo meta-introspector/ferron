@@ -1,0 +1,13 @@
+* {
+    port 8444
+}
+
+"solana.solfunmeme.com" {
+    location "/zos" {
+        proxy "http://127.0.0.1:8081"
+    }
+    
+    location "/file-manager" {
+        proxy "http://127.0.0.1:8080"
+    }
+}
